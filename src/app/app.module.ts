@@ -1,18 +1,13 @@
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+// Importing QueryBuilderModule from ej2-angular-querybuilder package.
+import { QueryBuilderModule } from '@syncfusion/ej2-angular-querybuilder';
+import { AppComponent }  from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports:      [ BrowserModule, QueryBuilderModule ], // Declaration of QueryBuilder module into NgModule.
+  declarations: [ AppComponent ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
